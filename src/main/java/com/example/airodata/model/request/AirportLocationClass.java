@@ -1,5 +1,6 @@
 package com.example.airodata.model.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 @Data
@@ -7,18 +8,45 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class AirportLocationClass {
+    @JsonProperty("id")
     private String id;
+
+    @JsonProperty("gmt")
     private String gmt;
-    private String airport_id;
-    private String iata_code;
-    private String city_iata_code;
-    private String icao_code;
-    private String country_iso2;
-    private String geoname_id;
-    private String latitude;
-    private String longitude;
-    private String airport_name;
-    private String country_name;
-    private String phone_number;
+
+    @JsonProperty("airport_id")
+    private String airportId;
+
+    @JsonProperty("iata_code")
+    private String iataCode;
+
+    @JsonProperty("city_iata_code")
+    private String cityIataCode;
+
+    @JsonProperty("icao_code")
+    private String icaoCode;
+
+    @JsonProperty("country_iso2")
+    private String countryIso2;
+
+    @JsonProperty("geoname_id")
+    private String geonameId;
+
+    @JsonProperty("latitude")
+    private float latitude;
+
+    @JsonProperty("longitude")
+    private float longitude;
+
+    @JsonProperty("airport_name")
+    private String airportName;
+
+    @JsonProperty("country_name")
+    private String countryName;
+
+    @JsonProperty("phone_number")
+    private String phoneNumber;
+
+    @JsonProperty("timezone")
     private String timezone;
 }
